@@ -50,17 +50,17 @@ const initalState: MenuState = {
   isMenuCollapsed: false,
 };
 
-interface Item {
-  key: Number;
+export interface Item {
+  key: String;
   label: React.ReactElement<any>;
 }
 const items: Item[] = [
   {
-    key: 1,
+    key: 'login',
     label: <Link to="/auth/login">Login</Link>,
   },
   {
-    key: 2,
+    key: 'register',
     label: <Link to="/auth/register">Register</Link>,
   },
 ];

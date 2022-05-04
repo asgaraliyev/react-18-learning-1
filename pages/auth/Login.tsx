@@ -1,15 +1,16 @@
 import { Form, Space, Input, Button, Checkbox, Typography } from 'antd';
 const { Title, Paragraph, Text, Link } = Typography;
+import { useNavigate } from 'react-router-dom';
 import * as React from 'react';
 const Login = () => {
+  const navigate = useNavigate();
   const onFinish = (values: any) => {
-    console.log('Success:', values);
+    navigate('/main/dashboard');
   };
 
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
   };
-
   return (
     <Form
       name="basic"
