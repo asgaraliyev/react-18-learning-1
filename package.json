@@ -6,8 +6,10 @@
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.2",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0"
   },
+  "main": "./src/index.tsx",
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
