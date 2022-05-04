@@ -2,8 +2,7 @@ import Header from '../components/Header';
 import * as React from 'react';
 import { Layout } from 'antd';
 import Footer from '../components/Footer';
-import Menu from '../components/Menu';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 const {
   Header: AntdHeader,
   Footer: AntdFooter,
@@ -53,19 +52,16 @@ const initalState: MenuState = {
 
 interface Item {
   key: Number;
-  label: String;
-  to: String;
+  label: React.ReactElement<any>;
 }
 const items: Item[] = [
   {
     key: 1,
-    label: 'Login',
-    to: '/auth/login',
+    label: <Link to="/auth/login">Login</Link>,
   },
   {
     key: 2,
-    label: 'Register',
-    to: '/auth/register',
+    label: <Link to="/auth/register">Register</Link>,
   },
 ];
 const Auth = () => {
